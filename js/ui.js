@@ -308,9 +308,8 @@ var ui = {
     var lis = document.querySelectorAll("#optionsBar li");
     for(var i=0;i<lis.length;i++){
       if(e.target == lis[i]){
-        if(i == 2) i += 2; //Dirty fix to allow for German language selection, despite French not being finished. Fix later!!!
+        //if(i >=2) i++; //Dirty fix to allow for German language selection, despite French not being finished. Fix later!!!
         settings.set("locale",i);
-        if(i == 4) i = 2; //Dirty fix to allow for German language selection, despite French not being finished. Fix later!!!
         display.updateLocale();
         display.populatePartLists();
         display.updateStatDisplay();
